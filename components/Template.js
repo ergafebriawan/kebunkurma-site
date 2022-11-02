@@ -12,8 +12,8 @@ export default function Template(props){
     },[]);
 
     const getLogo = async () => {
-        const response = await axios.get("http://cms.saygon-park.com/api/logos/2?populate=*");
-        setLogo(response.data.data.attributes.picture.data.attributes.url);
+        const response = await axios.get("http://cms.saygon-park.com/api/logos/3?populate=*");
+        setLogo(response.data.data.attributes.picture.data.attributes.formats.thumbnail.url);
     }
     
     return(

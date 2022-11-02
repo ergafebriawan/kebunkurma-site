@@ -13,7 +13,7 @@ export default function MainHeader() {
     }, []);
 
     const getImage = async () => {
-        const response = await axios.get("http://cms.saygon-park.com/api/slider-waterparks?populate=*");
+        const response = await axios.get("http://cms.saygon-park.com/api/slider-kebun-kurmas?populate=*");
         setCur(response.data.data);
     }
     return (
@@ -31,24 +31,25 @@ export default function MainHeader() {
                 </Carousel>
             </div>
             <div className="flex justify-center">
-                <div className="absolute pt-3 pb-5 -mt-16 bg-gray-100 rounded-lg shadow-md sm:w-full md:w-auto">
-                    <div className="mb-3 text-xl font-bold text-center text-gray-800">Information</div>
+                <div className="absolute pt-3 pb-10 -mt-16 bg-amber-200 rounded-t-lg shadow-md sm:w-full md:w-auto">
+                    <div className="mb-3 text-xl font-bold text-center text-amber-800">Information</div>
                     <div className="flex justify-center mx-10">
-                        <div className="px-5 pt-2 pb-2 mx-2 text-gray-100 rounded-lg shadow-md md:w-48 sm:w-36 bg-gradient-to-l to-cyan-600 from-cyan-400 aspect-video">
+                        <div className="px-5 pt-2 pb-2 mx-2 text-amber-100 rounded-t-lg shadow-md md:w-48 sm:w-36 bg-amber-700 ring-2 ring-amber-800 aspect-video">
                             <div className="text-lg font-bold text-center">Hari Buka</div>
                             <div className="flex justify-center my-3 text-gray-200"><FcCalendar size={30}/></div>
                             <div className="text-sm font-semibold text-center">Selasa - Minggu (Senin tutup)</div>
                         </div>
-                        <div className="px-5 pt-2 pb-2 mx-2 text-gray-100 rounded-lg shadow-md md:w-48 sm:w-36 aspect-video bg-gradient-to-l to-cyan-600 from-cyan-400">
+                        <div className="px-5 pt-2 pb-2 mx-2 text-amber-100 rounded-t-lg shadow-md md:w-48 sm:w-36 aspect-video bg-amber-700 ring-2 ring-amber-800">
                         <div className="text-lg font-bold text-center">Harga Tiket</div>
                             <div className="flex justify-center my-3 text-gray-200"><FaTicketAlt size={30} color={'#fbbf24'}/></div>
-                            <div className="text-sm font-semibold text-center">Rp 35.000,-</div>
+                            <div className="text-sm font-semibold text-center">Rp 15.000,-(Weekday)</div>
+                            <div className="text-sm font-semibold text-center">Rp 20.000,-(Weekend)</div>
                             
                         </div>
-                        <div className="px-5 pt-2 pb-2 mx-2 text-gray-100 rounded-lg shadow-md md:w-48 sm:w-36 aspect-video bg-gradient-to-l to-cyan-600 from-cyan-400">
+                        <div className="px-5 pt-2 pb-2 mx-2 text-amber-100 rounded-t-lg shadow-md md:w-48 sm:w-36 aspect-video bg-amber-700 ring-2 ring-amber-800">
                         <div className="text-lg font-bold text-center">Jam Buka</div>
                             <div className="flex justify-center my-3 text-gray-200"><FcClock size={30}/></div>
-                            <div className="text-sm font-semibold text-center">08.00 - 17.00 WIB</div>
+                            <div className="text-sm font-semibold text-center">08.00 - 16.00 WIB</div>
                             
                         </div>
                     </div>

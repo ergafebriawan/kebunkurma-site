@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Template from '../components/Template';
 import MainHeader from '../components/MainHeader';
 import AboutCompany from '../components/AboutCompany';
-import Fasilitas from '../components/Fasilitas';
+import Fasilitas from '../components/Product';
 import Wahana from '../components/Wahana';
 import Gallery from '../components/Gallery';
 import KontakKami from '../components/KontakKami';
@@ -16,7 +16,7 @@ export default function Home() {
         <MainHeader />
 
         {/* Tentang Kami */}
-        <div className='mt-44'>
+        <div className='mt-48'>
           <AboutCompany />
         </div>
         

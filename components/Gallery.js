@@ -2,34 +2,34 @@ import axios from "axios";
 export default function Gallery() {
     return (
         <>
-            <section className="min-w-full pt-5 pb-16 bg-cyan-600 sm:px-14 md:px-52">
-                <h2 className="my-3 text-2xl font-bold text-center text-white">Gallery</h2>
+            <section className="min-w-full pt-5 pb-16 bg-lime-600 sm:px-14 md:px-52">
+                <h2 className="my-3 text-2xl font-bold text-center text-amber-200">Gallery</h2>
                 <div className="flex justify-center">
 
                     <div className="grid gap-1 sm:grid-cols-2 md:grid-cols-4">
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/7_1b912afe38.jpg?updated_at=2022-10-02T08:48:17.854Z"
+                            url="http://cms.saygon-park.com/uploads/IMG_20210721125616_6f82fbc40f.jpg?updated_at=2022-10-02T08:51:51.612Z"
                             alt="Gallery 1" />
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/9_286f031899.jpg?updated_at=2022-10-02T08:48:17.235Z"
+                            url="http://cms.saygon-park.com/uploads/IMG_9689_f0086e95ba.JPG?updated_at=2022-10-02T08:51:57.336Z"
                             alt="Gallery" />
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/8_49bf39ad1e.jpg?updated_at=2022-10-02T08:48:16.394Z"
+                            url="http://cms.saygon-park.com/uploads/20180524_104523_693598b794.jpg?updated_at=2022-10-02T08:51:46.309Z"
                             alt="Gallery" />
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/pesawat_dan_kolam_olympic_43d5494e33.jpg?updated_at=2022-10-02T08:48:04.757Z"
+                            url="http://cms.saygon-park.com/uploads/IMG_20210721125452_d0777b53da.jpg?updated_at=2022-10-02T08:51:36.472Z"
                             alt="Gallery" />
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/waterboom_70d43bcdb9.jpg?updated_at=2022-10-02T08:48:03.491Z"
+                            url="http://cms.saygon-park.com/uploads/IMG_9663_4790adb760.JPG?updated_at=2022-10-02T08:51:47.087Z"
                             alt="Gallery" />
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/dd_2b39067980.JPG?updated_at=2022-10-02T08:48:40.482Z"
+                            url="http://cms.saygon-park.com/uploads/20180719_075812_64e53c38ba.jpg?updated_at=2022-10-02T08:51:40.427Z"
                             alt="Gallery" />
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/DSC_0735_f02e59baa7.jpg?updated_at=2022-10-02T08:49:03.862Z"
+                            url="http://cms.saygon-park.com/uploads/IMG_8240_2d224dffb1.JPG?updated_at=2022-10-02T08:51:58.205Z"
                             alt="Gallery" />
                         <ItemsGallery
-                            url="http://cms.saygon-park.com/uploads/DSC_0565_a14c47858e.JPG?updated_at=2022-10-02T08:48:40.633Z"
+                            url="http://cms.saygon-park.com/uploads/20180719_075812_64e53c38ba.jpg?updated_at=2022-10-02T08:51:40.427Z"
                             alt="Gallery" />
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export default function Gallery() {
 function ItemsGallery(props) {
     return (
         <>
-            <img src={props.url} alt={props.alt} className="object-cover w-48 duration-200 rounded-sm aspect-square hover:scale-150" />
+            <img src={props.url} alt={props.alt} className="object-cover w-48 duration-200 rounded-lg aspect-square hover:scale-150" />
         </>
     );
 }

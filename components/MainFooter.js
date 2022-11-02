@@ -7,11 +7,11 @@ export default function MainFooter(props) {
                 <div className="grid w-full md:grid-cols-2 sm:grid-cols-1">
                     <div className="mt-10 ml-10">
                         <a href="/" className="flex items-center">
-                            <img src={props.logo} className="h-20 mr-3 aspect-square" alt="Logo" />
+                            <img src={props.logo} className="h-20 mr-3 object-cover aspect-square" alt="Logo" />
                             <div>
-                                <h2 className="self-center text-2xl font-semibold text-white whitespace-nowrap">Saygon Waterpark</h2>
+                                <h2 className="self-center text-2xl font-semibold text-white whitespace-nowrap">Wisata Kebun Kurma</h2>
                                 <p className="text-sm font-semibold text-gray-200">PT. Duta Putri Bersaudara</p>
-                                <p className="text-sm font-light text-gray-200">Jl. Sengon-Bakalan, Purwosari, Pasuruan Jawa Timur <br/>67162</p>
+                                <p className="text-sm font-light text-gray-200">Ds. Karanglo, Sukorejo, Pasuruan Jawa Timur <br/>67161</p>
                             </div>
                         </a>
                     </div>

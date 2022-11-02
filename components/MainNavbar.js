@@ -7,19 +7,19 @@ export default function MainNavbar(props) {
     return (
         <>
             <section className="sticky top-0 z-30">
-                <nav className="bg-cyan-600 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+                <nav className="bg-lime-600 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
                     <div className="container flex flex-wrap items-center justify-between mx-auto">
                         <a href="/" className="flex items-center">
                             <img
                                 src={props.logo}
-                                className="mr-3 h-14 aspect-square"
+                                className="mr-3 h-14 aspect-square object-cover"
                                 alt="Logo"
                             />
-                            <span className="self-center text-xl font-semibold text-gray-100 whitespace-nowrap dark:text-white">
-                                Saygon Waterpark
+                            <span className="self-center text-xl font-semibold text-amber-200 whitespace-nowrap dark:text-white">
+                                Wisata Kebun Kurma
                             </span>
                         </a>
-                        <button onClick={() => setShow(!show)} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-100 rounded-lg md:hidden hover:bg-gray-100 hover:text-cyan-600 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                        <button onClick={() => setShow(!show)} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-amber-200 rounded-lg md:hidden hover:bg-amber-200 hover:text-lime-600 focus:outline-none focus:ring-2 focus:ring-amber-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                             <span className="sr-only">Open main menu</span>
                             <BiMenu size={24}/>
                         </button>
@@ -70,60 +70,19 @@ export default function MainNavbar(props) {
                                         }
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/product">
+                                        {props.active_page == 'product' ?
+                                            <MenuItem menu="Produk" active={true} />
+                                            :
+                                            <MenuItem menu="Produk" />
+                                        }
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-
-                {/* <div className="flex items-center justify-between px-2 py-4 bg-cyan-600 min-w-min">
-                    <div className="flex ml-2">
-                        <img
-                            src={props.logo}
-                            className="mr-3 h-14 aspect-square"
-                            alt="Logo"
-                        />
-                        <span className="self-center text-xl font-semibold text-gray-100 whitespace-nowrap dark:text-white">
-                            Saygon Waterpark
-                        </span>
-                    </div>
-                    <div className="flex mr-16 space-x-10">
-                        <a href="/">
-                            {props.active_page == 'beranda' ? 
-                            <MenuItem menu="Beranda" active={true} />
-                            :
-                            <MenuItem menu="Beranda"/>
-                            }
-                        </a>
-                        <a>
-                        {props.active_page == 'fasilitas' ? 
-                            <MenuDropdown menu="Fasilitas" active={true} />
-                            :
-                            <MenuDropdown menu="Fasilitas" />
-                            }
-                        </a>
-                        <a href="/about">
-                        {props.active_page == 'about' ? 
-                            <MenuItem menu="Tentang Kami" active={true} />
-                            :
-                            <MenuItem menu="Tentang Kami" />
-                            }
-                        </a>
-                        <a href="/about">
-                        {props.active_page == 'kontak' ? 
-                            <MenuItem menu="Kontak" active={true} />
-                            :
-                            <MenuItem menu="Kontak" />
-                            }
-                        </a>
-                        <a href="/promo">
-                        {props.active_page == 'promo' ? 
-                            <MenuItem menu="Promo" active={true} />
-                            :
-                            <MenuItem menu="Promo" />
-                            }
-                        </a>
-                    </div>
-                </div> */}
             </section>
         </>
     );
@@ -132,7 +91,7 @@ export default function MainNavbar(props) {
 function MenuItem(props) {
     return (
         <>
-            <span className={`flex mb-5 items-center text-sm font-semibold ${props.active != true ? `text-gray-50` : `text-cyan-800`}  hover:text-cyan-800`}>
+            <span className={`flex mb-5 items-center text-sm font-semibold ${props.active != true ? `text-amber-200` : `text-lime-800`}  hover:text-lime-800`}>
                 {props.menu}
             </span>
         </>
@@ -143,7 +102,7 @@ function MenuDropdown(props) {
     const [show, setShow] = useState(false);
     return (
         <>
-            <span onClick={() => setShow(!show)} className={`flex mb-5 items-center text-sm font-semibold ${props.active != true ? `text-gray-50` : `text-cyan-800`}  hover:text-cyan-800`}>
+            <span onClick={() => setShow(!show)} className={`flex mb-5 items-center text-sm font-semibold ${props.active != true ? `text-amber-200` : `text-lime-800`}  hover:text-lime-800`}>
                 {props.menu}
                 <HiChevronDown />
             </span>
@@ -153,11 +112,6 @@ function MenuDropdown(props) {
                         <li>
                             <a href="/map">
                                 <ItemsMenuDropdown menu="Wahana" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/map">
-                                <ItemsMenuDropdown menu="Fasilitas" />
                             </a>
                         </li>
                         <li>
@@ -180,7 +134,7 @@ function MenuDropdown(props) {
 function ItemsMenuDropdown(props) {
     return (
         <>
-            <div className="mb-3 ml-2 mr-5 text-sm font-semibold text-gray-800 hover:text-cyan-600">
+            <div className="mb-3 ml-2 mr-5 text-sm font-semibold text-lime-800 hover:text-lime-600">
                 {props.menu}
                 <hr className="mt-1" />
             </div>
