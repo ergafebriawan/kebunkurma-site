@@ -19,6 +19,10 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <meta
+                        httpEquiv="Content-Security-Policy"
+                        content="upgrade-insecure-requests"
+                    />
                     <meta name="description" content="template 1 Blog by fusionx project" />
                     <link rel="icon" href="/logo.ico" />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
