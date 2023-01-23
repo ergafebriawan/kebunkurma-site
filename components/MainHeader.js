@@ -6,14 +6,14 @@ import {FcCalendar, FcClock} from "react-icons/fc";
 
 export default function MainHeader() {
     const [cur, setCur] = useState([]);
-    const url_main = 'http://cms.saygon-park.com';
+    const url_main = 'https://cms.saygon-park.com';
 
     useEffect(() => {
         getImage()
     }, []);
 
     const getImage = async () => {
-        const response = await axios.get("http://cms.saygon-park.com/api/slider-kebun-kurmas?populate=*");
+        const response = await axios.get("https://cms.saygon-park.com/api/slider-kebun-kurmas?populate=*");
         setCur(response.data.data);
     }
     return (

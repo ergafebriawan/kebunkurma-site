@@ -12,7 +12,7 @@ export default function Template(props){
     },[]);
 
     const getLogo = async () => {
-        const response = await axios.get("http://cms.saygon-park.com/api/logos/3?populate=*");
+        const response = await axios.get("https://cms.saygon-park.com/api/logos/3?populate=*");
         setLogo(response.data.data.attributes.picture.data.attributes.formats.thumbnail.url);
     }
     
@@ -22,11 +22,11 @@ export default function Template(props){
             <title>{props.title_page}</title>
         </Head>
         <div>
-            <MainNavbar logo={`http://cms.saygon-park.com`+logo} active_page={props.active_page}/>
+            <MainNavbar logo={`https://cms.saygon-park.com`+logo} active_page={props.active_page}/>
             <div className="mb-5 bg-amber-50">
                 {props.children}
             </div>
-            <MainFooter logo={`http://cms.saygon-park.com`+logo}/>
+            <MainFooter logo={`https://cms.saygon-park.com`+logo}/>
         </div>
         </>
     );
